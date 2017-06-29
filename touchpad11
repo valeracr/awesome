@@ -1,0 +1,2 @@
+#!/bin/bash
+/bin/bash -c "[ \"$(grep 'Handlers=mouse[0-9]' /proc/bus/input/devices | wc -l)\" = \"1\" ] || synclient TouchpadOff=1"
