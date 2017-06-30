@@ -306,6 +306,9 @@ volicon:buttons(awful.util.table.join(
 --
 pacman = wibox.widget.textbox("<span color=\"#e65117\"><b>☠</b></span>")
 pacman:set_font("Comic Sans MS 16")
+m = wibox.layout.margin(pacman,0,0,4,4)
+pacman1 = wibox.layout.fixed.horizontal()
+pacman1:add(m)
 pacman:buttons(awful.util.table.join(
     awful.button({ }, 1, function () awful.util.spawn("xfce4-terminal -e 'yaourt -Syyu --aur'", false) end)
 ))
@@ -622,7 +625,7 @@ awful.screen.connect_for_each_screen(function(s)
             fixedwidget5,
             fixedwidget4,
             space,
-            pacman,
+            pacman1,
             pacwidget,
            -- space1,
             --space,
