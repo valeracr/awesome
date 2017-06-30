@@ -309,7 +309,7 @@ pacman:set_font("Comic Sans MS 16")
 m = wibox.layout.margin(pacman,0,0,4,4)
 pacman1 = wibox.layout.fixed.horizontal()
 pacman1:add(m)
-pacman:buttons(awful.util.table.join(
+pacman1:buttons(awful.util.table.join(
     awful.button({ }, 1, function () awful.util.spawn("xfce4-terminal -e 'yaourt -Syyu --aur'", false) end)
 ))
 -- Pacman Widget
